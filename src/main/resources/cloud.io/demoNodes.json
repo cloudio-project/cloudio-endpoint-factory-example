@@ -1,0 +1,48 @@
+{
+	"nodes": {
+		"myNodeFromFactory": {
+			"type": "CloudioNode",
+			"objects": {
+				"myObject": {
+					"type": "CloudioObject",
+					"properties": {
+						"test": 1.0,
+						"test3": "safsd"
+					},
+					"attributes": {
+						"myInt": {
+							"constraint": "Measure",
+							"type": "Integer"
+						},
+						"myMeasure": {
+							"constraint": "Measure",
+							"type": "Number"
+						},
+						"printText": {
+							"constraint": "SetPoint",
+							"type": "String"
+						},
+						"staticInt": {
+							"constraint": "Static",
+							"type": "Integer"
+						},
+						"mySetPoint": {
+							"constraint": "SetPoint",
+							"type": "Number"
+						}
+					}
+				}
+			}
+		},
+		"myCounterNode": {
+			"type": "localTest.MyNode",
+			"properties": {
+				"delay": 1000,
+				"max": 20,
+				"step": 1
+			},
+			"objects": {
+			}
+		}
+	}
+}
