@@ -6,14 +6,15 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
     maven {
+        name = "GitHubPackages"
         url = uri("https://maven.pkg.github.com/cloudio-project/cloudio-endpoint-java")
         credentials {
             username = project.findProperty("gpr.user") ?: System.getenv("GPR_USER")
             password = project.findProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
         }
     }
+    mavenCentral()
 }
 
 dependencies {
